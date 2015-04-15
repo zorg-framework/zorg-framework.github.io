@@ -1,121 +1,81 @@
-<!doctype html>
-<html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="css/prism.css" media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <link rel="shortcut icon" href="img/zorg.svg"/>
-    </head>
-    <body>
+---
+layout: default
+title: Setup Zorg for your device
+---
+<div class="container">
+    <h2>Linux setup for Zorg on the Intel Edison</h2>
+    <div class="divider"></div>
+    <br/>
 
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper red darken-4">
-                    <a href="#" class="brand-logo center">Zorg</a>
+    <div class="row">
+        <div class="col s12 m6">
 
-                    <ul class="left">
-                        <li class="active"><a href="/"><i class="large mdi-action-home"></i></a></li>
-                        <li><a href="examples.html">Examples</a></li>
-                    </ul>
-
-                    <ul class="right">
-                        <li><a href="https://github.com/gunthercox/zorg">Zorg on GitHub</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
-        <div class="container">
-            <h2>Linux setup for Zorg on the Intel Edison</h2>
-            <div class="divider"></div>
-            <br/>
-
-            <div class="row">
-                <div class="col s12 m6">
-
-                    <div class="spacer2">
-                        <p class="highlight">
-                            screen /dev/ttyUSB0 115200
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col s12 m6">
-                    <p class="flow-text">
-                        Begin by connecting to the Edison board using the <strong>screen</strong> command.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m6">
-
-                    <div class="spacer2">
-                        <p class="highlight">
-                            ifconfig<br/><br/>
-
-                            <span>wlan0</span>     <span class="tab">Link encap:Ethernet  HWaddr d0:7e:35:cd:6c:43</span><br/>  
-                                      <span class="tab"></span><span class="tab"><span class="highlight-red">inet addr:192.168.1.8</span>  Bcast:192.168.1.255  Mask:255.255.255.0</span><br/>
-                                      <span class="tab"></span><span class="tab">inet6 addr: fe80::d27e:35ff:fecd:6c43/64 Scope:Link</span><br/>
-                                      <span class="tab"></span><span class="tab">UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</span><br/>
-                                      <span class="tab"></span><span class="tab">RX packets:127929 errors:0 dropped:0 overruns:0 frame:0</span><br/>
-                                      <span class="tab"></span><span class="tab">TX packets:74144 errors:0 dropped:0 overruns:0 carrier:0</span><br/>
-                                      <span class="tab"></span><span class="tab">collisions:0 txqueuelen:1000 </span><br/>
-                                      <span class="tab"></span><span class="tab">RX bytes:100747886 (100.7 MB)  TX bytes:9349905 (9.3 MB)</span><br/>
-
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col s12 m6">
-                    <p class="flow-text">
-                        Use the <strong>ifconfig</strong> command to determine the ip address of the device. In this example, we can see that the ip for the device is <strong>192.168.1.8</strong>
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m6">
-                    <img src="img/connect_to_server.png" style="width:100%"/>
-                </div>
-                <div class="col s12 m6">
-                    <p class="flow-text">
-                        From within the file browser, select the option <em>Connect to Server</em>. A window will then appear where you can enter <strong><u>sftp://</u>192.168.1.8</strong>. Using sftp will alow you to easily transfer files, and edit documents on the Edison. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m6">
-
-                    <div class="spacer2">
-                        <p class="highlight">
-                            
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col s12 m6">
-                    <p class="flow-text">
-                        
-                    </p>
-                </div>
+            <div class="spacer2">
+                <p class="highlight">
+                    $ sudo apt-get install screen<br />
+                    $ sudo screen /dev/ttyUSB0 115200
+                </p>
             </div>
 
         </div>
+        <div class="col s12 m6">
+            <p class="flow-text">
+                Begin by connecting to the Edison board using the <strong>screen</strong> command.
+            </p>
+        </div>
+    </div>
 
-        <footer class="page-footer red darken-4">
-            <div class="footer-copyright">
-                <div class="container">
-                    &copy; Copyright 2015
-                </div>
+    <div class="row">
+        <div class="col s12 m6">
+
+            <div class="spacer2">
+                <p class="highlight">
+                    $ ifconfig<br/><br/>
+
+                    <span>wlan0</span><span class="tab">Link encap:Ethernet  HWaddr d0:7e:35:cd:6c:43</span><br/>
+                    <span class="tab"></span><span class="tab"><span class="highlight-red">inet addr:192.168.1.8</span>  Bcast:192.168.1.255  Mask:255.255.255.0</span><br/>
+                    <span class="tab"></span><span class="tab">inet6 addr: fe80::d27e:35ff:fecd:6c43/64 Scope:Link</span><br/>
+                    <span class="tab"></span><span class="tab">UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</span><br/>
+                    <span class="tab"></span><span class="tab">RX packets:127929 errors:0 dropped:0 overruns:0 frame:0</span><br/>
+                    <span class="tab"></span><span class="tab">TX packets:74144 errors:0 dropped:0 overruns:0 carrier:0</span><br/>
+                    <span class="tab"></span><span class="tab">collisions:0 txqueuelen:1000 </span><br/>
+                    <span class="tab"></span><span class="tab">RX bytes:100747886 (100.7 MB)  TX bytes:9349905 (9.3 MB)</span>
+                </p>
             </div>
-        </footer>
 
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/prism.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
-</html>
+        </div>
+        <div class="col s12 m6">
+            <p class="flow-text">
+                Use the <strong>ifconfig</strong> command to determine the ip address of the device. In this example, we can see that the ip for the device is <strong>192.168.1.8</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6">
+            <img src="img/connect_to_server.png" style="width:100%"/>
+        </div>
+        <div class="col s12 m6">
+            <p class="flow-text">
+                From within the file browser, select the option <em>Connect to Server</em>. A window will then appear where you can enter <strong><u>sftp://</u>root@192.168.1.8</strong>. Using sftp will alow you to easily transfer files, and edit documents on the Edison.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6">
+
+            <div class="spacer2">
+                <p class="highlight">
+
+                </p>
+            </div>
+
+        </div>
+        <div class="col s12 m6">
+            <p class="flow-text">
+
+            </p>
+        </div>
+    </div>
+</div>
