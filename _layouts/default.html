@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="css/prism.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+
+        <link rel="shortcut icon" href="img/zorg.svg"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper red darken-4">
+                    <a href="#" class="brand-logo center">Zorg</a>
+
+                    <ul class="left">
+                        <li class="active"><a href="/"><i class="large mdi-action-home"></i></a></li>
+                        <li><a href="setup.html">Setup</a></li>
+                    </ul>
+
+                    <ul class="right">
+                        <li><a href="https://github.com/gunthercox/zorg">Zorg on GitHub</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        {{ content }}
+
+        <footer class="page-footer red darken-4">
+          <div class="footer-copyright">
+            <div class="container">
+            &copy; Copyright 2015
+            </div>
+          </div>
+        </footer>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/prism.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
