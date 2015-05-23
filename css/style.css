@@ -2,6 +2,15 @@ p {
     margin-top: 0;
 }
 
+.input-field .prefix.active,
+input[type=text]:focus:not([readonly])+label {
+    color: #fff;
+}
+
+input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+}
+
 .brand-logo {
     font-variant: small-caps;
 }
