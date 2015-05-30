@@ -9,30 +9,60 @@ title: Zorg - A Python framework for robotics and physical computing
 
     <div class="container" style="margin-top: 50px;">
         <div class="card-panel">
-            <div class="row center">
-                <div class="col s12 m2 card-logo">
-                    <img src="img/zorg.svg" style="height: 250px;"/>
-                </div>
-                <div class="col s12 m10 card-content">
+            <div class="row center card-logo">
+
+                <div class="col s12 m12 l5 card-content">
                     <h4 class="header light center">
                         A modern <strong>extensible</strong> robotics framework designed for the <br />
                         <strong>Internet of Things</strong>
                     </h4>
+                </div>
 
-                    <a href="https://github.com/gunthercox/zorg" class="btn-large red darken-4 z-depth-3">
-                        Download on GitHub
+                <div class="col s12 l2">
+                    <div class="valign-wrapper hide-on-med-and-down">
+                        <img src="img/zorg.svg" class="valign responsive-img" style="width: 100%"/>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l5 card-content hide-on-med-and-down">
+                    <h4 class="header light center">
+                        Zorg makes it easier to build <strong>better robots</strong> more quickly and with <strong>less code</strong>
+                    </h4>
+                </div>
+
+            </div>
+            <div class="row center">
+                <div class="col s12">
+                    <a href="/setup.html" class="btn-large red darken-4 z-depth-3">
+                        Get started with Zorg
                     </a>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="border-bottom: 1px solid #ddd;">
     <div class="row">
+        <div class="col s12 m7">
+            <h4>Configure your robots with Zorg!</h4>
+
+            <p class="flow-text">
+                Zorg is a Python framework for robotics, and Internet of Things projects.
+                It makes it easy to configure and command your projects.
+            <p>
+
+            <p class="flow-text">
+                Zorg runs on a variety of platforms, including the <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html">Intel Edison</a> and the Raspberry Pi. Zorg supports a wide variety of hardware components, including various analog and digital sensors that come in the <a href="http://www.seeedstudio.com/depot/Grove-starter-kit-plus-Intel-IoT-Edition-for-Intel-Galileo-Gen-2-and-Edison-p-1978.html">Grove Starter Kit</a>. Adding support for new platforms and devices is simple thanks to Zorg's modular design.
+            <p>
+
+            <p class="flow-text">
+                <img src="img/edison.jpg" class="valign responsive-img" style="width: 100%"/>
+            </p>
+        </div>
         <div class="col s12 m5">
-            <pre class="line-number">
-                <code class="language-python">
+            <pre class="spacer2"><code class="language-python">
 import time
 import zorg
 
@@ -50,7 +80,7 @@ def move_servo(my):
     time.sleep(0.1)
 
 robot = zorg.robot({
-    "name": "Test",
+    "name": "Zorg",
     "connections": {
         "edison": {
             "adaptor": "zorg_edison.Edison",
@@ -66,24 +96,12 @@ robot = zorg.robot({
     "work": move_servo,
 })
 
-robot.start()
-                </code>
-            </pre>
-        </div>
-        <div class="col s12 m7">
-            <h4>Configure your robots with Zorg!</h4>
-
-            <p class="flow-text">
-                Zorg is a Python framework for robotics, and Internet of Things projects.
-                It makes it easy to configure and command your projects.
-            <p>
-
-            <p class="flow-text">
-                Zorg runs on a variety of platforms, including the <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html">Intel Edison</a> and the Raspberry Pi. There is support for a variety of analog and digital sensors built in, and Zorg is extensible so that anyone can add support for new platforms and devices.
-            <p>
+robot.start()</code></pre>
         </div>
     </div>
+</div>
 
+<div class="container">
     <div class="row">
         <div clas="col s12">
 
