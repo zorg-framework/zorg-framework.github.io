@@ -48,3 +48,8 @@ input[type=text]:focus:not([readonly]) {
 .tab {
     margin-left: 43px;
 }
+
+.divider {
+    height: 3px;
+    background-color: white;
+}
