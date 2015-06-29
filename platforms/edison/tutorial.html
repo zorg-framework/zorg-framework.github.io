@@ -1,33 +1,32 @@
 ---
 layout: default
 title: Setup Zorg for your device
+permalink: /platforms/edison/tutorial/
 ---
 <div class="container">
     <h2>Installing Zorg on the Intel Edison</h2>
     <div class="divider"></div>
-    <br/>
 
     <div class="row">
         <div class="col s12">
             <p class="flow-text">
-                Intel has created a great guide on how to configure your Intel Edison board.
-                If you haven't done this yet, it is highly recommend that you start there.
-                <a href="https://software.intel.com/en-us/iot/library/edison-getting-started">Getting Started with the Intel Edison</a>
+                Installing Zorg should be a relatively simple process on any device.
+                This guide will take you through the steps that are required to get your project up and running!
             </p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <div class="spacer2">
                 <p class="highlight">
-                    $ ls /dev/ | grep ttyUSB<br />
-                    <br />
+                    $ ls /dev/ | grep ttyUSB<br/>
+                    <br/>
                     ttyUSB0
                 </p>
             </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <p class="flow-text">
                 Now connect both of the micro-USB cables to the Edison board
                 and your computer. You should then determine what the USB
@@ -39,17 +38,17 @@ title: Setup Zorg for your device
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <div class="spacer2">
                 <p class="highlight">
-                    $ sudo apt-get install screen<br />
+                    $ sudo apt-get install screen<br/>
                     $ sudo screen
                     <mark title="/dev/ttyUSB0 is the device we found before">/dev/ttyUSB0</mark>
                     <mark title="115200 is the baud that the Edison is expecting">115200</mark>
                 </p>
             </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <p class="flow-text">
                 Begin by connecting to the Edison board using the
                 <code>screen</code> command.
@@ -58,7 +57,7 @@ title: Setup Zorg for your device
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <div class="spacer2">
                 <p class="highlight">
                     $ ifconfig<br/><br/>
@@ -74,7 +73,7 @@ title: Setup Zorg for your device
                 </p>
             </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <p class="flow-text">
                 Use the <code>ifconfig</code> command to determine the IP
                 address of the device. In this example, we can see that the IP
@@ -84,14 +83,14 @@ title: Setup Zorg for your device
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <div class="spacer2">
                 <p class="highlight">
                     xdk-whitelist --add 127.0.0.1
                 </p>
             </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <p class="flow-text">
                 You may need to whitelist your host computer's IP Address before
                 you will be able to connect to it through <strong>sftp</strong>.
@@ -100,10 +99,10 @@ title: Setup Zorg for your device
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
-            <img src="img/connect_to_server.png" style="width:100%"/>
+        <div class="col s12 m12 l6">
+            <img src="/img/connect_to_server.png" style="width:100%"/>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
             <p class="flow-text">
                 From within the file browser, select the option
                 <em>Connect to Server</em>. A window will then appear where you
@@ -115,17 +114,13 @@ title: Setup Zorg for your device
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
-            <div class="spacer2">
-                <p class="highlight">
-
-                </p>
-            </div>
+        <div class="col m6">
+            <a href="/platforms/edison/install/" class="btn btn-large orange accent-4">
+                Previous: Installing Zorg on the Edison
+            </a>
         </div>
-        <div class="col s12 m6">
-            <p class="flow-text">
-
-            </p>
+        <div class="col m6 right-align">
         </div>
     </div>
+
 </div>

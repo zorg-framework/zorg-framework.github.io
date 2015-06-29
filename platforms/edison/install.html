@@ -1,0 +1,126 @@
+---
+layout: default
+title: Working with Zorg
+permalink: /platforms/edison/install/
+---
+<div class="container">
+    <h2>Working with Zorg on the Intel Edison</h2>
+    <div class="divider"></div>
+
+    <div class="row">
+        <div class="col s12">
+            <p class="flow-text">
+                Installing Zorg should be a relatively simple process on any device.
+                This guide will take you through the steps that are required to get your project up and running!
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12" style="background: #0071C5">
+            <h4 class="center white-text">
+                <img src="/img/intel.svg" height="50" class="hide-on-small-only"/>
+                <span style="top: -10px; position: relative;">
+                    Getting Started with the Intel Edison
+                </span>
+            </h4>
+        </div>
+        <div class="col s12" style="background: #004280;">
+            <div style="padding: 30px;">
+
+                <p class="flow-text white-text">
+                    Intel has created a great guide on how to configure your Intel Edison board.
+                    If you haven't done this yet, it is highly recommend that you start there.
+                </p>
+                <div class="center">
+                    <a href="https://software.intel.com/en-us/iot/library/edison-getting-started" class="waves-effect btn-large" style="background: #0071C5" target="_blank">
+                        Configure My Intel Edison
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <p class="flow-text">
+                Once you have properly configured your Intel Edison board,
+                you should install pip. This is the recommended method for
+                installing python packages and their requirements.
+
+                The Intel Edison is powered by <a href="https://www.yoctoproject.org/" target="_blank">Yocto</a>
+                but pip has not been added to the official repositories <em>yet</em>,
+                therefore we need to add the unofficial repositories.
+                <a href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board" target="_blank">Intel IoT Developer Kit libraries</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="spacer2">
+                <p class="highlight">
+                    $ vi /etc/opkg/base-feeds.conf
+                    <br/>
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m12 l6">
+            <p class="flow-text">
+                Add the following three repositories using vi.
+                <br/>
+                <small>
+                <b>src/gz all http://repo.opkg.net/edison/repo/all</b>
+                <br/>
+                <b>src/gz edison http://repo.opkg.net/edison/repo/edison</b>
+                <br/>
+                <b>src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32</b>
+                </small>
+                <br/>
+                Save and close the file.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="spacer2">
+                <p class="highlight">
+                    $ opkg update
+                    <br/>
+                    $ wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+                    <br/>
+                    $ python ez_setup.py --no-check-certificate
+                    <br/>
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m12 l6">
+            <p class="flow-text">
+                Then update the package list.
+                <br/>
+
+                PIP is now installed, however it requires
+                <a href="https://pypi.python.org/pypi/setuptools" target="_blank">setuptools</a>
+                to be installed before PIP can install any Python packages.
+                The setuptools package can be installed on the Intel Edison
+                through an easy manual installation.
+                <br/>
+                Once the easy setup file has been downloaded, run it.
+                <br/><br/>
+
+                Now you will be able to install packages on your Intel Edison using PIP.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 right-align">
+            <a href="/platforms/edison/tutorial/" class="btn btn-large orange accent-4">
+                Next: Building your projects on the Edison
+            </a>
+        </div>
+    </div>
+
+</div>
