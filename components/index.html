@@ -23,7 +23,7 @@ title: Supported Components
     {% endfor %}
 
     {% assign oddcount = site.data.components.size | modulo: 2 %}
-    {% if oddcount == 1 %}
+    {% if oddcount != 0 %}
     </div>
     {% endif %}
 </div>

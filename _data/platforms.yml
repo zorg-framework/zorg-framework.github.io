@@ -1,0 +1,11 @@
+- name: Intel Edison
+  image: edison.svg
+  getting-started: /platforms/edison/install/
+  documentation: https://zorg-edison.readthedocs.org/
+
+- name: Raspberry PI
+  image: raspberry_pi.svg
+
+- name: Arduino Firmata
+  image: arduino_uno.svg
+  examples: https://github.com/zorg-framework/zorg-firmata/tree/master/examples
