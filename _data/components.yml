@@ -1,0 +1,53 @@
+- name: LED
+  image: grove/led.svg
+  image-alt: Grove LED
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/led/
+  examples: https://zorg-gpio.readthedocs.org/en/latest/led/#examples
+
+- name: Buzzer
+  image: grove/buzzer.svg
+  image-alt: Grove buzzer
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/button/
+  examples: https://zorg-gpio.readthedocs.org/en/latest/button/#examples
+
+- name: Button
+  image: grove/button.svg
+  image-alt: Grove buzzer
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/button/
+  examples: https://zorg-gpio.readthedocs.org/en/latest/button/#examples
+
+- name: Temperature sensor
+  image: grove/temperature_sensor.svg
+  image-alt: Grove temperature sensor
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/temperature_sensor/
+
+- name: Servo
+  image: grove/servo.svg
+  image-alt: Grove servo
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/servo/
+
+- name: LCD with RGB backlight
+  image: grove/lcd.svg
+  image-alt: Grove LCD with RGB backlight
+  documentation: https://zorg-grove.readthedocs.org/en/latest/docs/LCD.html
+
+- name: Smart relay
+  image: grove/relay.svg
+  image-alt: Grove smart relay
+  documentation: https://zorg-gpio.readthedocs.org/en/latest/relay/
+
+- name: Light sensor
+  image: grove/light_sensor.svg
+  image-alt: Grove light sensor
+
+- name: Rotary angle sensor
+  image: grove/rotary_angle_sensor.svg
+  image-alt: Grove rotary angle sensor
+
+- name: Sound sensor
+  image: grove/sound_sensor.svg
+  image-alt: Grove sound sensor
+
+- name: Touch sensor
+  image: grove/touch_sensor.svg
+  image-alt: Grove touch sensor

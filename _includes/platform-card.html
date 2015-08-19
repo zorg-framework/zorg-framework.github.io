@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-content grey lighten-3">
+        <span class="card-title grey-text text-darken-4">
+            {{ platform.name }}
+        </span>
+    </div>
+    <div class="card-image">
+        <img src="/img/{{ platform.image }}" height="200" />
+    </div>
+    <div class="card-action">
+        {% if platform.getting-started %}
+        <a href="{{ platform.getting-started }}">
+            Get started
+        </a>
+        {% else %}
+        <a href="">
+            Coming soon
+        </a>
+        {% endif %}
+
+        {% if platform.documentation %}
+        <a href="{{ platform.documentation }}">
+            <i class="mdi-av-my-library-books"></i>
+            Documentation
+        </a>
+        {% endif %}
+        {% if platform.examples %}
+        <a href="{{ platform.examples }}">
+            <i class="mdi-action-explore"></i>
+            Examples
+        </a>
+        {% endif %}
+    </div>
+</div>

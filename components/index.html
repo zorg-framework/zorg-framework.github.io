@@ -4,154 +4,26 @@ title: Supported Components
 ---
 
 <div class="container">
-
     <h2 class="white-text">{{ page.title }}</h2>
     <div class="divider"></div>
-    <br/>
+    <p></p>
 
+    {% for component in site.data.components %}
+    {% capture currentcycle %}{% cycle 'left', 'right' %}{% endcapture %}
+
+    {% if currentcycle == 'left' %}
     <div class="row">
-
+    {% endif %}
         <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/buzzer.svg" height="150" alt="Grove buzzer">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Buzzer</span>
-                </div>
-            </div>
+            {% include component-card.html component=component %}
         </div>
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/button.svg" height="150" alt="Grove button">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Button</span>
-                </div>
-            </div>
-        </div>
-
+    {% if currentcycle == 'right' %}
     </div>
+    {% endif %}
+    {% endfor %}
 
-    <div class="row">
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/light_sensor.svg" height="150" alt="Grove light sensor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Light Sensor</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/temperature_sensor.svg" height="150" alt="Grove temperature sensor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Temperature Sensor</span>
-                </div>
-            </div>
-        </div>
-
+    {% assign oddcount = site.data.components.size | modulo: 2 %}
+    {% if oddcount != 0 %}
     </div>
-
-    <div class="row">
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/rotary_angle_sensor.svg" height="150" alt="Grove rotary angle sensor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Rotary Angle Sensor</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/sound_sensor.svg" height="150" alt="Grove sound sensor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Sound Sensor</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/led.svg" height="150" alt="Grove LED">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">LED</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/relay.svg" height="150" alt="Grove relay">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Smart Relay</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/touch_sensor.svg" height="150" alt="Grove touch sensor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Touch Sensor</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/servo.svg" height="150" alt="Grove servo motor">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">Mini Servo</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/img/grove/lcd.svg" height="150" alt="Grove RGB LCD">
-                </div>
-                <div class="card-action grey lighten-3">
-                    <span class="card-title grey-text text-darken-4">RGB Backlight LCD</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+    {% endif %}
 </div>
