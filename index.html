@@ -80,14 +80,14 @@ def move_servo(my):
     angle = 0
 
     while True:
-    my.servo.set_angle(angle)
+        my.servo.set_angle(angle)
 
-    angle += 45
+        angle += 45
 
-    if angle > 135:
-        angle = 0
+        if angle > 135:
+            angle = 0
 
-    time.sleep(0.1)
+        time.sleep(0.1)
 
 robot = zorg.robot({
     "name": "Zorg",
